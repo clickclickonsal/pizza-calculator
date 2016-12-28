@@ -12,11 +12,12 @@ prompt.get(['RSVPCount'], function (err, result) {
 });
 
 function numberOfPizzasToOrder (RSVPCount) {
+  const LIKELY_NUMBER_OF_PEOPLE_TO_SHOW_UP = Math.ceil(RSVPCount * 0.80);
   const NUMBER_OF_SLICES = 2;
+  const TOTAL_NUMBER_OF_SLICES = NUMBER_OF_SLICES * LIKELY_NUMBER_OF_PEOPLE_TO_SHOW_UP;
   const ONE_PIZZA = 8;
-  const NUMBER_OF_PIZZAS_TO_SUBTRACT = Math.floor(Math.random() * 2 + 2);
 
-  return (RSVPCount * NUMBER_OF_SLICES/ONE_PIZZA) - NUMBER_OF_PIZZAS_TO_SUBTRACT;
+  return TOTAL_NUMBER_OF_SLICES / ONE_PIZZA;
 }
 
 function onErr(err) {
