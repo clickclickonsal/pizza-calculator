@@ -6,6 +6,13 @@
   "scripts": {},
   "author": "Sal Hernandez",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.comclickclickonsal/pizza-calculator"
+  },
+  "bin": {
+    "pizza-calculator" : "index.js"
+  },
   "dependencies": {
     "colors": "^1.1.2",
     "prompt": "^1.0.0"
